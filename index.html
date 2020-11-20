@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<!-- NAV BAR -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSobre()">Sobre</a></li>
+            <li><a href="#" onclick="showCoordenadas()">Clima Local</a></li>
+            <li><a href="#" onclick="showLanchonete()">Lanchonete</a></li>
+        </ul> 
+    </nav>
+<!----------------->
+
+<!-- HEADER -->
+<section id="header">
+    <header>
+        <h1>Teste Pratico - Web</h1>
+    </header>
+</section>
+
+<!------------>
+
+<!-- SOBRE -->
+    <section id="sobre">
+        <h2>Sobre mim</h2>
+        <div class="row">
+            <div class="column">
+                <img id="imgProfile" src="img/profile.png" alt="profile">
+            </div>
+            <div class="column">
+                <p>Meu nome é Ravi Borges Scardino, sou estudante do 2 período de Ciências da Computação da UVV. </br>Estou desenvolvendo este website para cumprir o teste pratico para a vaga de web.</p>
+            </div>
+        </div> 
+    </section>
+<!-----------> 
+
+<!-- COORDENADAS -->
+<section id="coordenadas">
+    <div>
+        <h2>Coordenadas</h2>
+        <div id="txtLatLon">
+            <p>Latitude: </p> 
+            <p>Longitude: </p> 
+        </div>
+        <div id="LatLonValues">
+            <p id="lat">Hidden</p>
+            <p id="lon">Hidden</p>
+        </div>
+    </div>
+    <button id="btnCoords" onclick="getCoords()">Mostrar</button>
+
+</section>
+<!----------------->
+
+
+
+
+
+<!-- CLIMA -->
+<section id="clima">
+    <h2>Clima Local</h2>
+    <div id="divWeather" class="displayWeather">
+        <table>
+            <tr>
+              <td>
+                <div>
+                    <img id="imgIconWeather" src="" alt="">
+                </div>
+              </td>
+              <td>
+                <div id="txtWeather">
+                    <p>Cidade: </p>
+                    <p>Clima: </p>
+                    <p>Temperatura: </p>
+                </div>
+              </td>
+              <td>
+                <div>
+                    <p id="city"></p>
+                    <p id="weather"></p>
+                    <p id="temp"></p>
+                </div>
+              </td>
+            </tr>
+          </table>
+    </div>
+
+    <div id="divErrorWeather" class="displayWeather">
+        Nao foi possivel identificar a sua localizacao. Por favor permita identificar suas coordenadas.
+    </div>
+      <button id="btnWeather" onclick="getCurrentWeather()">Atualizar</button>
+</section>
+<!----------->
+
+
+<!-- LANCHONETE -->
+
+<section id="lanchonete">
+
+    <h2>Monte seu lanche!</h2>
+
+
+    <table>
+        <tr>
+            <td>
+                <div>
+                    <form action="" method="get">
+                        <input type="checkbox" name="bread" value="bread" id="bread" onchange="checkBread()">
+                            <label for="bread"> Pao </label><br><br>
+                        <input type="checkbox" name="meat" value="meat" id="meat" onchange="checkMeat()">
+                            <label for="meat"> Carne </label><br><br>
+                        <input type="checkbox" name="cheese" value="cheese"  id="cheese" onchange="checkCheese()">
+                            <label for="cheese"> Queijo </label><br><br>
+                        <input type="checkbox" name="bacon" value="bacon"  id="bacon" onchange="checkBacon()">
+                            <label for="bacon"> Bacon </label><br><br>
+                        <input type="checkbox" name="lettuce" value="lettuce"  id="lettuce" onchange="checkLettuce()">
+                            <label for="lettuce"> Alface </label><br><br>
+                        <input type="checkbox" name="onion" value="onion" id="onion" onchange="checkOnion()">
+                            <label for="onion"> Cebola </label><br><br>
+                        <input type="checkbox" name="tomato" value="tomato"  id="tomato" onchange="checkTomato()">
+                            <label for="tomato"> Tomate </label><br><br>
+                        <input type="checkbox" name="pickles" value="pickles"  id="pickles" onchange="checkPickles()">
+                            <label for="pickles"> Pickles </label><br><br>
+                
+                    </form>
+                </div>
+            </td>
+            <td>
+                <div id="hamburger">
+                    <div class="imgBurger" id="BreadTop"></div>
+                    <div class="imgBurger" id="Pickles"></div>
+                    <div class="imgBurger" id="Tomato"></div>
+                    <div class="imgBurger" id="Onion"></div>
+                    <div class="imgBurger" id="Lettuce"></div>
+                    <div class="imgBurger" id="Bacon"></div>
+                    <div class="imgBurger" id="Cheese"></div>
+                    <div class="imgBurger" id="Meat"></div>
+                    <div class="imgBurger" id="BreadBottom"></div>
+
+                </div>
+            </td>
+        </tr>
+    </table>
+</section>
+
+<!---------------->
+
+<script src="script.js"></script>
+</body>
+</html>
